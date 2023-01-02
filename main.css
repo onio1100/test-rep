@@ -1,6 +1,26 @@
 *{
-    background-color: darkbluegit;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+
+}
+section{
+    width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+/* tile 1 */
+.fill-1{
+    width: 100%;
+    height: 100%;
+}
+.button-1{
+    height: 40px;
+    width: 120px;
 }
