@@ -4,6 +4,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --pink: #f564a9ff;
+    --dark: #251605;
+    --orange: #BBBE64;
+    --dark-blue: #643173ff;
+    --yellow: #fde74cff;
+}
 body{
     display: flex;
     flex-direction: column;
@@ -16,19 +23,20 @@ section{
     justify-content: center;
     align-items: center;
 }
+
 /* section 1 */
+
 .fill-1{
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: darkmagenta;
+    background-color: var(--dark-blue);
 }
 .button-1{
     border-radius: 1rem;
-    border: 4px solid rgb(129, 173, 41);
-    background-color: yellowgreen;
+    background-color: var(--yellow);
     height: 80px;
     width: 240px;
     display: flex;
@@ -39,10 +47,66 @@ section{
     user-select: none;
 }
 .button-1:hover {
-    background-color: rgb(129, 173, 41);
+    background-color: var(--orange);
 }
 .button-text-1{
+    color: var(--dark-blue);
     font-weight: 700;
     font-size: 2rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+/* section 2 */
+
+.fill-2{
+    width: 100%;
+    height: 100%;
+    background-color: var(--orange);
+    position: relative;
+}
+.square-2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 250px;
+    background-color: var(--pink);
+}
+.slider-2{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 500px;
+    height: 10px;
+    border-radius: 5px;  
+    background: var(--dark-blue);
+    outline: none;
+}
+.slider-2::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; 
+    background: var(--dark-blue);
+    cursor: pointer;
+  }
+  .slider-2::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--dark-blue);
+    cursor: pointer;
+  }
+  .width-2 {
+    position: absolute;
+    top: calc(50% + 325px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .height-2{
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 325px);
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
