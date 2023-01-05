@@ -136,6 +136,7 @@ section{
     transform: translate(-50%, -50%);
     border-radius: 1rem;
     background-color: var(--yellow);
+    color: var(--dark-blue);
     height: 80px;
     width: 240px;
     display: flex;
@@ -151,7 +152,7 @@ section{
   .main-button-3:hover{
     background-color: var(--orange);
   }
-  /* .button-wraper-3{
+  .button-wraper-3{
     width: 360px;
     height: 90px;
     position: absolute;
@@ -178,6 +179,7 @@ section{
 .button-3{
     border-radius: 1rem;
     background-color: var(--yellow);
+    color: var(--dark-blue);
     height: 80px;
     width: 240px;
     display: flex;
@@ -200,4 +202,4 @@ section{
     font-size: 2rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--yellow);
-} */
+}

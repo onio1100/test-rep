@@ -30,24 +30,41 @@ const display3 = document.getElementById("display-3");
 const mainButton3 = document.getElementById("main-button-3");
 const button13 = document.getElementById("button-1-3");
 let clicks3 = 0;
-let controlValue3 = 0;
+let controlValue = [10, button13, "button-wraper-3-on", autoClick3];
 
 function plus3(){
     clicks3++;
-    controlValue3++;
+    display3.innerHTML = clicks3;
+    control(controlValue);
 }
 
-function add3(){
-    plus3();
+function minus3(value){
+    clicks3 = clicks3 - value;
     display3.innerHTML = clicks3;
 }
 
-// function showAuto3(){
-//     if(clicks3 == 10){
-//         button13.classList.add("");
-//         display3.removeEventListener("change", showAuto3);
-//     };
-//     console.log("test");
-// }
+function control(cv){
+    if(clicks3 == cv[0]){
+        unlockButton3(cv[1], cv[2], cv[3]);
+    }
+}
 
-mainButton3.addEventListener("click", add3);
+function unlockButton3(buttonName, className, functionName){
+    buttonName.classList.add(className);
+    buttonName.lastElementChild.addEventListener("click", functionName);
+    controlValue = [next, 100];
+}
+
+function autoClick3(){
+    console.log("click test");
+    if(clicks3 > 9){
+        minus3(10);
+        setInterval(plus3, 1000);
+    }
+}
+
+function next(){
+    console.log("you win");
+};
+
+mainButton3.addEventListener("click", plus3);
