@@ -29,8 +29,11 @@ heightSlider2.addEventListener("input",height2);
 const display3 = document.getElementById("display-3");
 const mainButton3 = document.getElementById("main-button-3");
 const button13 = document.getElementById("button-1-3");
+const button23 = document.getElementById("button-2-3");
 let clicks3 = 0;
-let controlValue = [10, button13, "button-wraper-3-on", autoClick3];
+let multiplier3 = [0];
+let controlValue = [10, button13, autoClick3,
+[100, button23, double3]];
 
 function plus3(){
     clicks3++;
@@ -45,26 +48,39 @@ function minus3(value){
 
 function control(cv){
     if(clicks3 == cv[0]){
-        unlockButton3(cv[1], cv[2], cv[3]);
+        unlockButton3(cv[1], cv[2]);
     }
 }
 
-function unlockButton3(buttonName, className, functionName){
-    buttonName.classList.add(className);
+function unlockButton3(buttonName, functionName){
+    buttonName.classList.add("button-wraper-3-on");
     buttonName.lastElementChild.addEventListener("click", functionName);
-    controlValue = [next, 100];
+    controlValue = controlValue[3];
+}
+
+function multiplierControl3(element, index){
+    multiplier3[index]++;
+    element.firstElementChild.classList.add("multiplier-3-on");
+    element.firstElementChild.innerHTML = multiplier3[0];
 }
 
 function autoClick3(){
-    console.log("click test");
     if(clicks3 > 9){
         minus3(10);
+        multiplierControl3(button13, 0);
         setInterval(plus3, 1000);
     }
 }
 
-function next(){
-    console.log("you win");
+function double3(){
+    if(clicks3 > 49){
+        minus3(50);
+        // multiplierControl3(button23, 1);
+        if(clicks3 != 0){
+            clicks3 = clicks3 * 2;
+            display3.innerHTML = clicks3;
+        }
+    }
 };
 
 mainButton3.addEventListener("click", plus3);
