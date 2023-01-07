@@ -30,14 +30,16 @@ const display3 = document.getElementById("display-3");
 const mainButton3 = document.getElementById("main-button-3");
 const button13 = document.getElementById("button-1-3");
 const button23 = document.getElementById("button-2-3");
+const button33 = document.getElementById("button-3-3");
 let plusValue = 1;
 let clicks3 = 0;
 let multiplier3 = [0, 0];
 let controlValue = 
 [10, button13, autoClick3,
     [100, button23, double3, [
-        
-]]];
+        150, button33, gift3, [
+            "s","s","s"
+]]]];
 
 function plus3(){
     clicks3 += plusValue;
@@ -51,7 +53,7 @@ function minus3(value){
 }
 
 function control(cv){
-    if(clicks3 == cv[0]){
+    if(clicks3 >= cv[0]){
         unlockButton3(cv[1], cv[2]);
     }
 }
@@ -83,5 +85,15 @@ function double3(){
         plusValue++;
     }
 };
+function random(min, max) {
+    return Math.round(Math.random() * (max - min) + min);
+  }
+function gift3(){
+    if(clicks3 > 149){
+        minus3(150);
+        clicks3 += random(1,300);
+        display3.innerHTML = clicks3;
+    }
+}
 
 mainButton3.addEventListener("click", plus3);
