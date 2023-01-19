@@ -97,3 +97,19 @@ function gift3(){
 }
 
 mainButton3.addEventListener("click", plus3);
+
+// section 4
+
+const button4 = document.getElementById("button-4");
+const shape4 = document.getElementById("shape-4");
+
+function randomClipPath() {
+    let arr = [0,0,0,0,0,0,0,0];
+    for (let i in arr){
+        arr[i] = random(0,100);
+    }
+    console.log(arr);
+    shape4.style.clipPath = "polygon(" + arr[0] + "% " + arr[1] + "%, " + arr[2] + "% " + arr[3] + "%, " + arr[4] + "% " + arr[5] + "%, " + arr[6] + "% " + arr[7] + "% " + ")"; 
+}
+
+button4.addEventListener("click", randomClipPath);
