@@ -113,3 +113,35 @@ function randomClipPath() {
 }
 
 button4.addEventListener("click", randomClipPath);
+
+// section 5
+
+const square5 = document.getElementById("square-5");
+const display5 = document.getElementById("display-5");
+const slider15 = document.getElementById("slider-1-5");
+const slider25 = document.getElementById("slider-2-5");
+const slider35 = document.getElementById("slider-3-5");
+let colorArr5 = [127,127,127];
+function red5(){
+    colorArr5[0] = slider15.value;
+    setColor5();
+}
+
+function green5(){
+    colorArr5[1] = slider25.value;
+    setColor5();
+}
+
+function blue5(){
+    colorArr5[2] = slider35.value;
+    setColor5();
+}
+function setColor5(){
+    a = "rgb(" + colorArr5[0] + ", " + colorArr5[1] + ", " + colorArr5[2] + ")";
+    square5.style.backgroundColor = a;
+    display5.innerHTML = a;
+}
+
+slider15.addEventListener("input", red5);
+slider25.addEventListener("input", green5);
+slider35.addEventListener("input", blue5);
