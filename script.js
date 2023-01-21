@@ -145,3 +145,16 @@ function setColor5(){
 slider15.addEventListener("input", red5);
 slider25.addEventListener("input", green5);
 slider35.addEventListener("input", blue5);
+
+// section 6
+
+const div6 = document.getElementById("div-6");
+const slider6 = document.getElementById("slider-6")
+
+function setBorderRadius(){
+    number = slider6.value;
+    div6.style.borderRadius = number + "%";
+    div6.innerHTML = number + "%";
+}
+
+slider6.addEventListener("input", setBorderRadius);
