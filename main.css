@@ -376,3 +376,64 @@ section{
   background: var(--yellow);
   cursor: pointer;
 }
+
+/* section 7 */
+
+.fill-7{
+  width: 100%;
+  height: 100%;
+  background-color: var(--pink);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.body-7{
+  width: 40%;
+  height: 60%;
+  background-color: var(--yellow);
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 14% 14% 14% 14% 14% 14% 14%;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+}
+.display-7{
+  grid-area: 1 / 4 / 1 / 1 ;
+  background-color: var(--dark-blue);
+  width: 100%;
+  height: 90%;
+  border-radius: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: var(--yellow);
+  padding-right: 5px;
+}
+.button-7{
+  width: 97%;
+  height: 90%;
+  border-radius: 1rem;
+  background-color: var(--dark-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--orange);
+  transition: 0.2s;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  user-select: none;
+}
+.button-7:hover{
+  background-color: var(--pink);
+}
+/* .equal{
+  grid-area: 7 / 4 / 1 / 1 ;
+} */

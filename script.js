@@ -158,3 +158,65 @@ function setBorderRadius(){
 }
 
 slider6.addEventListener("input", setBorderRadius);
+
+// section 7
+
+const display7 = document.getElementById("display-7");
+const section7 = document.getElementById("section-7");
+let numberOne7 = "";
+let numberTwo7 = "";
+let operation7 = "";
+
+function refreshDisplay7(){
+    display7.innerHTML = numberOne7 + operation7 + numberTwo7;
+}
+
+function calculator(e){
+    element = e.target;
+    if(element.className.includes("number")){
+        if(operation7 == ""){
+            numberOne7 += element.innerHTML;
+        }else{
+            numberTwo7 += element.innerHTML;
+        }
+    }
+    if(element.className.includes("operation")){
+        operation7 = element.innerHTML;
+    }
+    if(element.className.includes("equal")){
+        numberOne7 = parseInt(numberOne7);
+        numberTwo7 = parseInt(numberTwo7);
+         switch (operation7) {
+            case "+":
+                numberOne7 = numberOne7 + numberTwo7;
+                break;
+            case "-":
+                numberOne7 = numberOne7 - numberTwo7;
+                break;
+            case "*":
+                numberOne7 = numberOne7 * numberTwo7;
+                break;
+            case ":":
+                numberOne7 = numberOne7 / numberTwo7;
+                break;
+            default:
+                break;
+         }
+        numberTwo7 = "";
+        operation7 = "";
+        // numberOne7 = toString(numberOne7);
+    }   
+    if(element.className.includes("clean")){
+        numberOne7 = "";
+        numberTwo7 = "";
+        operation7 = "";
+    }
+    if(element.className.includes("minus")){
+        
+    }
+    if(element.className.includes("dot")){
+
+    }
+    refreshDisplay7();
+}
+section7.addEventListener("click", calculator);
