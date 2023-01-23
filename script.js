@@ -166,6 +166,7 @@ const section7 = document.getElementById("section-7");
 let numberOne7 = "";
 let numberTwo7 = "";
 let operation7 = "";
+let numbersState7 = [true, true];
 
 function refreshDisplay7(){
     display7.innerHTML = numberOne7 + operation7 + numberTwo7;
@@ -181,30 +182,33 @@ function calculator(e){
         }
     }
     if(element.className.includes("operation")){
-        operation7 = element.innerHTML;
+        if(numberOne7 != ""){
+            operation7 = element.innerHTML;
+        }
     }
     if(element.className.includes("equal")){
-        numberOne7 = parseInt(numberOne7);
-        numberTwo7 = parseInt(numberTwo7);
-         switch (operation7) {
-            case "+":
-                numberOne7 = numberOne7 + numberTwo7;
-                break;
-            case "-":
-                numberOne7 = numberOne7 - numberTwo7;
-                break;
-            case "*":
-                numberOne7 = numberOne7 * numberTwo7;
-                break;
-            case ":":
-                numberOne7 = numberOne7 / numberTwo7;
-                break;
-            default:
-                break;
-         }
-        numberTwo7 = "";
-        operation7 = "";
-        // numberOne7 = toString(numberOne7);
+        if(numberOne7 != "" && operation7 != "" && numberTwo7 != ""){
+            numberOne7 = parseInt(numberOne7);
+            numberTwo7 = parseInt(numberTwo7);
+            switch (operation7) {
+                case "+":
+                    numberOne7 = numberOne7 + numberTwo7;
+                    break;
+                case "-":
+                    numberOne7 = numberOne7 - numberTwo7;
+                    break;
+                case "*":
+                    numberOne7 = numberOne7 * numberTwo7;
+                    break;
+                case ":":
+                    numberOne7 = numberOne7 / numberTwo7;
+                    break;
+                default:
+                    break;
+            }
+            numberTwo7 = "";
+            operation7 = "";
+        }
     }   
     if(element.className.includes("clean")){
         numberOne7 = "";
@@ -212,10 +216,23 @@ function calculator(e){
         operation7 = "";
     }
     if(element.className.includes("minus")){
-        
-    }
-    if(element.className.includes("dot")){
-
+        if(operation7 == ""){
+            if(numbersState7[0]){
+                numberOne7 = -Math.abs(numberOne7);
+                numbersState7[0] = false;
+            }else{
+                numberOne7 = Math.abs(numberOne7);
+                numbersState7[0] = true;
+            }
+        }else{
+            if(numbersState7[1]){
+                numberTwo7 = -Math.abs(numberTwo7);
+                numbersState7[1] = false;
+            }else{
+                numberTwo7 = Math.abs(numberTwo7);
+                numbersState7[1] = true;
+            }
+        }
     }
     refreshDisplay7();
 }

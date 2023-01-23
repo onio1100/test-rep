@@ -403,7 +403,7 @@ section{
 .display-7{
   grid-area: 1 / 4 / 1 / 1 ;
   background-color: var(--dark-blue);
-  width: 100%;
+  width: 99%;
   height: 90%;
   border-radius: 1rem;
   font-size: 2rem;
@@ -434,6 +434,7 @@ section{
 .button-7:hover{
   background-color: var(--pink);
 }
-/* .equal{
-  grid-area: 7 / 4 / 1 / 1 ;
-} */
+.equal{
+  width: 99%;
+  grid-area: 7 / 2 / 8 / 4 ;
+}
