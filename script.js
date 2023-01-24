@@ -237,3 +237,19 @@ function calculator(e){
     refreshDisplay7();
 }
 section7.addEventListener("click", calculator);
+
+// section 8
+
+const button8 = document.getElementById("button-8");
+const coin8 = document.getElementById("coin-8");
+
+function coinFlip(){
+    seed = random(0, 100);
+    if(seed > 50){
+        coin8.innerHTML = "EAGLE";
+    }else{
+        coin8.innerHTML = "HEADS";
+    }
+}
+
+button8.addEventListener("click", coinFlip);

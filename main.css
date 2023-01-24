@@ -438,3 +438,49 @@ section{
   width: 99%;
   grid-area: 7 / 2 / 8 / 4 ;
 }
+
+/* section 8 */
+
+.fill-8{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--orange);
+}
+.coin-8{
+  width: 400px;
+  height: 400px;
+  background-color: var(--yellow);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--dark);
+}
+.button-8{
+  width: 240px;
+  height: 80px;
+  border-radius: 1rem;
+  background-color: var(--yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--dark);
+  transition: 0.2s;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  user-select: none;
+  margin-top: 3rem;
+}
+.button-8:hover{
+  background-color: var(--dark);
+  color: var(--orange);
+}
