@@ -242,13 +242,24 @@ section7.addEventListener("click", calculator);
 
 const button8 = document.getElementById("button-8");
 const coin8 = document.getElementById("coin-8");
+let flip8 = false;
+let spin = 0;
 
 function coinFlip(){
-    seed = random(0, 100);
-    if(seed > 50){
-        coin8.innerHTML = "EAGLE";
-    }else{
-        coin8.innerHTML = "HEADS";
+    if(!flip8){
+        flip8 = true;
+        seed = random(0, 100);
+        if(seed > 50){
+            text = "EAGLE";
+            spin += 720;
+        }else{
+            text = "HEADS";
+            spin += 720;
+        }
+        coin8.style.transform = "rotateY(" + spin + "deg)";
+        coin8.innerHTML = text;
+        setTimeout(flip8 = false, 500);
+        console.log(spin, text);
     }
 }
 
