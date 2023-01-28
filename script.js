@@ -269,20 +269,9 @@ button8.addEventListener("click", coinFlip);
 const input9 = document.getElementById("input-9");
 const button9 = document.getElementById("button-9");
 
-function enc(){
+function encryption(){
     text = input9.value;
-    text = text.split("");
-    arr = [...text];
-    length = arr.length;
-    for(let i in text){
-        letter1 = text[i - 1];
-        letter2 = text[length - i];
-        arr[length - i] = letter1;
-        arr[i - 1] = letter2;
-    }
-    text = arr.join("");
-    console.log(text);
     input9.value = text;
 }
 
-button9.addEventListener("click", () => enc());
+button9.addEventListener("click", encryption);
