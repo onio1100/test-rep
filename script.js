@@ -251,10 +251,11 @@ function coinFlip(){
         seed = random(0, 100);
         if(seed > 50){
             text = "EAGLE";
+            spin += 720;
         }else{
             text = "HEADS";
+            spin += 720;
         }
-        spin += 720;
         coin8.style.transform = "rotateY(" + spin + "deg)";
         coin8.innerHTML = text;
         setTimeout(flip8 = false, 500);
@@ -263,15 +264,3 @@ function coinFlip(){
 }
 
 button8.addEventListener("click", coinFlip);
-
-// section 9
-
-const input9 = document.getElementById("input-9");
-const button9 = document.getElementById("button-9");
-
-function encryption(){
-    text = input9.value;
-    input9.value = text;
-}
-
-button9.addEventListener("click", encryption);
