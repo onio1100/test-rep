@@ -286,3 +286,23 @@ function enc(){
 }
 
 button9.addEventListener("click", () => enc());
+
+// section 10
+
+const min10 = document.getElementById("min-10");
+const max10 = document.getElementById("max-10");
+const button10 =document.getElementById("button-10");
+const display10 = document.querySelector(".display-10");
+
+function genRandom(){
+    min = min10.value;
+    max = max10.value;
+    if(min != "" && max != ""){
+        result = random(min, max);
+    }else{
+        result = "MISSING ARGUMENT";
+    }
+    display10.innerHTML = result;
+}
+
+button10.addEventListener("click", genRandom);
