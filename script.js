@@ -291,7 +291,7 @@ button9.addEventListener("click", () => enc());
 
 const min10 = document.getElementById("min-10");
 const max10 = document.getElementById("max-10");
-const button10 =document.getElementById("button-10");
+const button10 = document.getElementById("button-10");
 const display10 = document.querySelector(".display-10");
 
 function genRandom(){
@@ -306,3 +306,26 @@ function genRandom(){
 }
 
 button10.addEventListener("click", genRandom);
+
+// section 11
+
+const display11 = document.querySelector(".display-11");
+const button1_11 = document.getElementById("button-1-11")
+const button2_11 = document.getElementById("button-2-11")
+
+function startStopTimer11(){
+    console.log("chuj");
+    let dat = new Date();
+    function print(){
+        tempDate = new Date();
+        tempDate = tempDate - dat;
+        arr = [];
+        arr[0] = tempDate.getHours() + 1;
+        arr[1] = tempDate.getMinutes() + 1;
+        arr[2] = tempDate.getSecondes() + 1;
+        console.log(arr[0] + ":" + arr[1] + ":" + arr[2]);
+    }
+    setInterval(print, 1000);
+}
+
+button1_11.addEventListener("click",startStopTimer11)

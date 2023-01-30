@@ -601,3 +601,46 @@ section{
   align-items: center;
   color: var(--yellow);
 }
+
+/* section 11 */
+
+.fill-11{
+  width: 100%;
+  height: 100%;
+  background-color: var(--yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.display-11{
+  width: 500px;
+  height: 80px;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  color: var(--dark-blue);
+  align-items: center;
+}
+.button-11{
+  width: 240px;
+  height: 80px;
+  border-radius: 1rem;
+  background-color: var(--dark-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--yellow);
+  transition: 0.2s;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: 3rem;
+}
+.button-11:hover{
+  background-color: var(--pink);
+}
