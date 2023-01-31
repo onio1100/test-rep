@@ -319,12 +319,22 @@ let intervalID11;
 function startStopTimer11(){
     if(!timerWork11){
         timerWork11 = true;
+
         if(staticDate11 == ""){
             staticDate11 = Date.now();
         } else {
             staticDate11 = Date.now();
             staticDate11 = staticDate11 - tempDateSave11;
         }
+
+        function addZero11(number){
+            if( 10 > number){
+                return "0" + number;
+            }else{
+                return number;
+            }
+        }
+
         function print(){
             tempDate = Date.now();
             tempDate = tempDate - staticDate11;
@@ -335,23 +345,29 @@ function startStopTimer11(){
             arr[1] = addZero11(tempDate.getMinutes());
             arr[2] = addZero11(tempDate.getSeconds());
             display11.innerHTML = arr[0] + ":" + arr[1] + ":" + arr[2];
-    }
-    intervalID11 = setInterval(print, 1000);
-    button1_11.innerHTML = "STOP";
+        }
+
+        intervalID11 = setInterval(print, 1000);
+        button1_11.innerHTML = "STOP";
     }else {
         clearInterval(intervalID11);
         timerWork11 = false;
         button1_11.innerHTML = "START";
 
-    }
-    
-}
-function addZero11(number){
-    if( 10 > number){
-        return "0" + number;
-    }else{
-        return number;
-    }
+    }   
 }
 
-button1_11.addEventListener("click",startStopTimer11)
+function resetTimmer11(){
+    if(timerWork11){
+        startStopTimer11();
+        staticDate11 = "";
+        tempDateSave11 = 0;
+    }else{
+        staticDate11 = "";
+        tempDateSave11 = 0;
+    }
+    display11.innerHTML = "00:00:00";
+}
+
+button1_11.addEventListener("click",startStopTimer11);
+button2_11.addEventListener("click",resetTimmer11);
