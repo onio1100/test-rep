@@ -313,17 +313,22 @@ const display11 = document.querySelector(".display-11");
 const button1_11 = document.getElementById("button-1-11")
 const button2_11 = document.getElementById("button-2-11")
 let timerWork11 = false;
-let dat11 = "";
+let staticDate11 = "";
+let tempDateSave11 = 0;
 let intervalID11;
 function startStopTimer11(){
     if(!timerWork11){
         timerWork11 = true;
-        if(dat11 == ""){
-         dat11 = Date.now();
+        if(staticDate11 == ""){
+            staticDate11 = Date.now();
+        } else {
+            staticDate11 = Date.now();
+            staticDate11 = staticDate11 - tempDateSave11;
         }
         function print(){
             tempDate = Date.now();
-            tempDate = tempDate - dat11;
+            tempDate = tempDate - staticDate11;
+            tempDateSave11 = tempDate;
             tempDate = new Date(tempDate);
             arr = [];
             arr[0] = addZero11(tempDate.getHours() - 1);
@@ -337,6 +342,7 @@ function startStopTimer11(){
         clearInterval(intervalID11);
         timerWork11 = false;
         button1_11.innerHTML = "START";
+
     }
     
 }
