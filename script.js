@@ -312,20 +312,40 @@ button10.addEventListener("click", genRandom);
 const display11 = document.querySelector(".display-11");
 const button1_11 = document.getElementById("button-1-11")
 const button2_11 = document.getElementById("button-2-11")
-
+let timerWork11 = false;
+let dat11 = "";
+let intervalID11;
 function startStopTimer11(){
-    console.log("chuj");
-    let dat = new Date();
-    function print(){
-        tempDate = new Date();
-        tempDate = tempDate - dat;
-        arr = [];
-        arr[0] = tempDate.getHours() + 1;
-        arr[1] = tempDate.getMinutes() + 1;
-        arr[2] = tempDate.getSecondes() + 1;
-        console.log(arr[0] + ":" + arr[1] + ":" + arr[2]);
+    if(!timerWork11){
+        timerWork11 = true;
+        if(dat11 == ""){
+         dat11 = Date.now();
+        }
+        function print(){
+            tempDate = Date.now();
+            tempDate = tempDate - dat11;
+            tempDate = new Date(tempDate);
+            arr = [];
+            arr[0] = addZero11(tempDate.getHours() - 1);
+            arr[1] = addZero11(tempDate.getMinutes());
+            arr[2] = addZero11(tempDate.getSeconds());
+            display11.innerHTML = arr[0] + ":" + arr[1] + ":" + arr[2];
     }
-    setInterval(print, 1000);
+    intervalID11 = setInterval(print, 1000);
+    button1_11.innerHTML = "STOP";
+    }else {
+        clearInterval(intervalID11);
+        timerWork11 = false;
+        button1_11.innerHTML = "START";
+    }
+    
+}
+function addZero11(number){
+    if( 10 > number){
+        return "0" + number;
+    }else{
+        return number;
+    }
 }
 
 button1_11.addEventListener("click",startStopTimer11)
