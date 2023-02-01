@@ -371,3 +371,16 @@ function resetTimmer11(){
 
 button1_11.addEventListener("click",startStopTimer11);
 button2_11.addEventListener("click",resetTimmer11);
+
+// section 12
+
+const input12 = document.querySelector(".input-12");
+const button12= document.querySelector(".button-12");
+
+function read12(){
+    text = input12.value;
+    speaktext = new SpeechSynthesisUtterance(text);
+    speechSynthesis.speak(speaktext);
+}
+
+button12.addEventListener("click",read12);
