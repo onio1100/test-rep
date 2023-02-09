@@ -692,3 +692,52 @@ section{
 .button-12:hover{
   background-color: var(--orange);
 }
+
+/* section 13 */
+
+.fill-13{
+  width: 100%;
+  background-color: var(--dark);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.circles-wraper-13{
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.circle-13{
+  width: 133px;
+  height: 133px;
+  margin: 25px 0 0 25px;
+  background-color: var(--orange);
+  transform: 0.2s;
+  border-radius: 50%;
+}
+.circle-13:hover{
+  background-color: var(--yellow);
+}
+.button-13{
+  width: 240px;
+  height: 80px;
+  border-radius: 1rem;
+  background-color: var(--orange);  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--dark-blue);
+  transition: 0.2s;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  user-select: none;
+  margin-top: 3rem;
+}
+.button-13:hover{
+  background-color: var(--yellow);
+}

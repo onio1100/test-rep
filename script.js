@@ -28,14 +28,14 @@ heightSlider2.addEventListener("input",height2);
 
 const display3 = document.getElementById("display-3");
 const mainButton3 = document.getElementById("main-button-3");
-const button13 = document.getElementById("button-1-3");
+const button1_3 = document.getElementById("button-1-3");
 const button23 = document.getElementById("button-2-3");
 const button33 = document.getElementById("button-3-3");
 let plusValue = 1;
 let clicks3 = 0;
 let multiplier3 = [0, 0];
 let controlValue = 
-[10, button13, autoClick3,
+[10, button1_3, autoClick3,
     [100, button23, double3, [
         150, button33, gift3, [
             "s","s","s"
@@ -384,3 +384,17 @@ function read12(){
 }
 
 button12.addEventListener("click",read12);
+
+// section 13
+
+const button13 = document.querySelector(".button-13");
+let gameState;
+
+function startGame(){
+    let amoutOfNumbers = random(3,10);
+    let numbersValue = [];
+    for(let i in amoutOfNumbers){
+        numbersValue[i] = random(1,9);
+    }
+    
+}
