@@ -388,13 +388,41 @@ button12.addEventListener("click",read12);
 // section 13
 
 const button13 = document.querySelector(".button-13");
-let gameState;
+const circles13 = document.querySelectorAll(".circle-13");
+let gameState13;
 
-function startGame(){
+function makeCirclesClick() {
+    circles13.forEach(element => {
+        element.addEventListener("click", () => console.log("test"));
+    });};
+
+function circleOn13(element){
+    element.classList.add("circle-13-on");
+    setTimeout(() => element.classList.remove("circle-13-on"), 500);
+}
+
+function playSequence13(gameStateObject){
+    let cooldown = 0;
+    for(let i = 0; i < gameStateObject.numberOfItems; i++){
+        let element = circles13[gameStateObject.values[i]];
+        cooldown += 600;
+        setTimeout(() => circleOn13(element), cooldown);
+    }
+    setTimeout( () => makeCirclesClick(), cooldown);
+}
+
+function startGame13(){
     let amoutOfNumbers = random(3,10);
     let numbersValue = [];
-    for(let i in amoutOfNumbers){
-        numbersValue[i] = random(1,9);
+    for(let i = 0; i < amoutOfNumbers; i++){
+        numbersValue[i] = random(0,8);
     }
-    
+    gameState13 = {
+        numberOfItems: amoutOfNumbers,
+        values: numbersValue,
+    }
+    playSequence13(gameState13);
 }
+
+button13.addEventListener("click", startGame13);
+
