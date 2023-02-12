@@ -390,10 +390,16 @@ button12.addEventListener("click",read12);
 const button13 = document.querySelector(".button-13");
 const circles13 = document.querySelectorAll(".circle-13");
 let gameState13;
+let eventHandler = (e) => comperToSequence13(e);
 
 function makeCirclesClick() {
     circles13.forEach(element => {
-        element.addEventListener("click", () => console.log("test"));
+        element.addEventListener("click", eventHandler);
+    });};
+
+function turnOffCircles(){
+    circles13.forEach(element => {
+        element.removeEventListener("click", eventHandler);
     });};
 
 function circleOn13(element){
@@ -412,7 +418,7 @@ function playSequence13(gameStateObject){
 }
 
 function startGame13(){
-    let amoutOfNumbers = random(3,10);
+    let amoutOfNumbers = random(3,5);
     let numbersValue = [];
     for(let i = 0; i < amoutOfNumbers; i++){
         numbersValue[i] = random(0,8);
@@ -420,9 +426,25 @@ function startGame13(){
     gameState13 = {
         numberOfItems: amoutOfNumbers,
         values: numbersValue,
+        playerMoveCount: 0,
     }
     playSequence13(gameState13);
 }
 
-button13.addEventListener("click", startGame13);
+function comperToSequence13(e){
+    let targetValue = e.target.id.slice(-1);
+    targetValue -= 1;
+    let gameValue = gameState13.values[gameState13.playerMoveCount];
+    if(targetValue == gameValue){
+        gameState13.playerMoveCount += 1;
+        if(gameState13.playerMoveCount == gameState13.numberOfItems ){
+            alert("You win");
+            turnOffCircles();
+        }
+    }else{
+        alert("You lose");
+        turnOffCircles();
+    }
+}
 
+button13.addEventListener("click", startGame13);

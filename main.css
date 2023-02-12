@@ -717,6 +717,7 @@ section{
   background-color: var(--orange);
   transform: 0.2s;
   border-radius: 50%;
+  cursor: pointer;
 }
 .circle-13:hover{
   background-color: var(--yellow);
