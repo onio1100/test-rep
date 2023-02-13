@@ -718,6 +718,8 @@ section{
   transform: 0.2s;
   border-radius: 50%;
   cursor: pointer;
+  border: none;
+  outline: none;
 }
 .circle-13:hover{
   background-color: var(--yellow);
@@ -741,6 +743,9 @@ section{
 }
 .button-13:hover{
   background-color: var(--yellow);
+}
+.circle-13:active{
+  background-color: var(--dark-blue);
 }
 .circle-13-on{
   background-color: var(--dark-blue);

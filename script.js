@@ -418,7 +418,7 @@ function playSequence13(gameStateObject){
 }
 
 function startGame13(){
-    let amoutOfNumbers = random(3,5);
+    let amoutOfNumbers = random(3,10);
     let numbersValue = [];
     for(let i = 0; i < amoutOfNumbers; i++){
         numbersValue[i] = random(0,8);
