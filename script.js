@@ -108,7 +108,6 @@ function randomClipPath() {
     for (let i in arr){
         arr[i] = random(0,100);
     }
-    console.log(arr);
     shape4.style.clipPath = "polygon(" + arr[0] + "% " + arr[1] + "%, " + arr[2] + "% " + arr[3] + "%, " + arr[4] + "% " + arr[5] + "%, " + arr[6] + "% " + arr[7] + "% " + ")"; 
 }
 
