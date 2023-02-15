@@ -283,15 +283,8 @@ section{
 
 /* section 5 */
 
-.fill-5{
-  width: 100%;
-  height: 100%;
-  position: relative;
-  background-color: var(--yellow);
-}
+
 .square-5{
-  width: 500px;
-  height: 500px;
   background-color: rgb(127, 127, 127);
   position: absolute;
   top: 50%;
@@ -326,30 +319,11 @@ section{
   justify-content: space-evenly;
   align-items: center;
 }
-.slider-5{
-  appearance: none;
-  -webkit-appearance: none;
-  width: 500px;
-  height: 10px;
-  border-radius: 5px;  
-  background: var(--dark-blue);
-  outline: none;
-}
 .slider-5::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%; 
   background: var(--dark-blue);
-  cursor: pointer;
 }
 .slider-5::-moz-range-thumb {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
   background: var(--dark-blue);
-  cursor: pointer;
 }
 
 /* section 6 */
@@ -360,10 +334,7 @@ section{
   background-color: var(--dark-blue);
   position: relative;
 }
-.div-6{
-  width: 500px;
-  height: 500px;
-  background-color: var(--yellow);
+.square-6{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -377,32 +348,15 @@ section{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .slider-6{
-  appearance: none;
-  -webkit-appearance: none;
-  width: 500px;
-  height: 10px;
-  border-radius: 5px;  
-  background: var(--yellow);
-  outline: none;
   position: absolute;
   top: 50%;
   left: 5%;
 }
 .slider-6::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%; 
   background: var(--yellow);
-  cursor: pointer;
 }
 .slider-6::-moz-range-thumb {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
   background: var(--yellow);
-  cursor: pointer;
 }
 
 /* section 7 */
@@ -528,6 +482,7 @@ section{
 .input-9{
   width: 500px;
   height: 70px;
+  margin-bottom: 1rem;
   background-color: var(--yellow);
   color: var(--dark);
   border: none;
@@ -541,27 +496,6 @@ section{
 .input-9::placeholder{
   color: var(--dark);
 }
-.button-9{
-  width: 240px;
-  height: 80px;
-  border-radius: 1rem;
-  background-color: var(--yellow);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--dark);
-  transition: 0.2s;
-  font-size: 2rem;
-  font-weight: 700;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  cursor: pointer;
-  user-select: none;
-  margin-top: 3rem;
-}
-.button-9:hover{
-  background-color: var(--orange);
-}
-
 /* section 10 */
 
 .fill-10{
@@ -598,25 +532,8 @@ section{
   appearance: textfiled;
   -moz-appearance: textfield;
 }
-.button-10{
-  width: 240px;
-  height: 80px;
-  border-radius: 1rem;
-  background-color: var(--yellow);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--pink);
-  transition: 0.2s;
-  font-size: 1.5rem;
-  font-weight: 700;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  cursor: pointer;
-  user-select: none;
+.margin-bottom-10{
   margin-bottom: 3rem;
-}
-.button-10:hover{
-  background-color: var(--orange);
 }
 .display-10{
   width: 800px;
@@ -652,27 +569,9 @@ section{
   color: var(--dark-blue);
   align-items: center;
 }
-.button-11{
-  width: 240px;
-  height: 80px;
-  border-radius: 1rem;
-  background-color: var(--dark-blue);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--yellow);
-  transition: 0.2s;
-  font-size: 1.5rem;
-  font-weight: 700;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  cursor: pointer;
-  user-select: none;
+.margin-bottom-11{
   margin-bottom: 3rem;
 }
-.button-11:hover{
-  background-color: var(--pink);
-}
-
 /* section 12 */
 
 .fill-12{
@@ -692,6 +591,7 @@ section{
   border: none;
   outline: none;
   border-radius: 1rem;
+  margin-bottom: 3rem;
   padding: 0.5rem;
   font-size: 1.5rem;
   font-weight: 700;
@@ -699,26 +599,6 @@ section{
 }
 .input-12::placeholder{
   color: var(--pink);
-}
-.button-12{
-  width: 240px;
-  height: 80px;
-  border-radius: 1rem;
-  background-color: var(--yellow);  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--pink);
-  transition: 0.2s;
-  font-size: 1.5rem;
-  font-weight: 700;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  cursor: pointer;
-  user-select: none;
-  margin-top: 3rem;
-}
-.button-12:hover{
-  background-color: var(--orange);
 }
 
 /* section 13 */
